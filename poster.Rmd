@@ -1,6 +1,6 @@
 ---
 title: "simChef: an intuitive framework for reliable simulation studies in R"
-subtitle: "useR! Conference 2022 -- Poster Session"
+subtitle: "useR! 2022 -- Poster Session"
 author:
   name: "James Duncan<sup>1</sup>, Tiffany Tang<sup>1</sup>, Corrine F. Elliott<sup>1</sup>, Philippe Boileau<sup>1</sup>, Bin Yu<sup>1</sup>"
   affiliation: "<sup>1</sup>University of California, Berkeley"
@@ -33,7 +33,7 @@ xaringanExtra::use_extra_styles(
 )
 ```
 
-# Overview
+# 
 
 `simChef` is a powerful framework for designing, documenting, and deploying simulation experiments in R.
 
@@ -51,10 +51,6 @@ xaringanExtra::use_extra_styles(
 - **Method**: The main objects of study in the simulation, along with baselines.
 - **Evaluator**: Produce meaningful summaries and statistics of the results.
 - **Visualizer**: Outputs plots, tables, R Markdown, latex, etc. to populate interactive experiment documentation.
-
-# Interactive documentation
-
-![Interactive R Markdown simulation documentation](imgs/simchef.gif)
 
 # Grammar of simulations
 
@@ -75,6 +71,10 @@ experiment <- create_experiment() %>%
 results <- experiment %>%
   run_experiment()
 ```
+
+# Interactive documentation
+
+![Interactive R Markdown simulation documentation](imgs/simchef.gif)
 
 # Parallelization
 
@@ -110,3 +110,7 @@ Other helpful features:
 - A sibling package library of flexible and modular DGPs
 - Ongoing usability improvements
 - Submit issues and feature requests [on GitHub](https://github.com/Yu-Group/simChef/issues)!
+
+# Test {.no-block .test}
+
+This section doesn't have the poster block styling.

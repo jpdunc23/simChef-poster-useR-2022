@@ -1,6 +1,7 @@
 /* custom CSS styles in addition to those in poster.css */
-body > header, body > footer {
+body > header, body > footer, article > header {
     background: #003262;
+    color: white;
 }
 
 body > footer {
@@ -23,20 +24,23 @@ main[property="articleBody"] > article a {
     background: white;
 }
 
-main[property="articleBody"] > article {
+main[property="articleBody"] > article:not(.no-block) {
     /* line-height: 1.15; */
+    background: linear-gradient(#eee, #fff);
+    /* background: none; */
+    /* border: 1px #003262 solid; */
 }
 
-article > header {
-    color: white;
-    background: #003262;
+.no-block > header {
+    color: #003262;
 }
+
 
 pre code {
     /* font-size: 1.2em; */
 }
 
-/* Line Hover Indicator */
+/* Line Hover Indicator (adapted from XaringanExtra) */
 .sourceLine:hover {
     font-weight: bold;
     opacity: 1 !important;

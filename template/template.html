@@ -106,6 +106,14 @@ $body$
      var header = document.createElement("header");
      var h3 = document.createElement("h3");
 
+     // if (sections[i].classList.contains("no-block")) {
+     //     article.classList.add("no-block")
+     // }
+     sections[i].classList.remove("section", "level1");
+     for (var j = 0; j < sections[i].classList.length; j++) {
+         article.classList.add(sections[i].classList[j]);
+     }
+
      // move h1 content into the h3
      var h1 = sections[i].getElementsByTagName("h1")[0];
      while (h1.firstChild) {

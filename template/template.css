@@ -31,6 +31,14 @@ main[property="articleBody"] p {
 main[property="articleBody"] > article *:not(header>h3) {
     font-size: 1.7rem;
 }
+/* articles with class no-block don't have poster block styling */
+.no-block {
+    background: none;
+}
+.no-block > header {
+    color: #2e3436;
+    background: none;
+}
 pre,
 code,
 samp,
