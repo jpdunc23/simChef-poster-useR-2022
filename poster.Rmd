@@ -1,5 +1,5 @@
 ---
-title: "simChef: an R package"
+title: "simChef: an intuitive framework for reliable simulation studies in R"
 subtitle: "useR! Conference 2022 -- Poster Session"
 author:
   name: "James Duncan<sup>1</sup>, Tiffany Tang<sup>1</sup>, Corrine F. Elliott<sup>1</sup>, Philippe Boileau<sup>1</sup>, Bin Yu<sup>1</sup>"
@@ -52,6 +52,10 @@ xaringanExtra::use_extra_styles(
 - **Evaluator**: Produce meaningful summaries and statistics of the results.
 - **Visualizer**: Outputs plots, tables, R Markdown, latex, etc. to populate interactive experiment documentation.
 
+# Interactive documentation
+
+![Interactive R Markdown simulation documentation](imgs/simchef.gif)
+
 # Grammar of simulations
 
 ```{r, eval=FALSE}
@@ -72,11 +76,7 @@ results <- experiment %>%
   run_experiment()
 ```
 
-# Interactive documentation
-
-![Interactive R Markdown simulation documentation](imgs/simchef.gif)
-
-# Parallelized simulations
+# Parallelization
 
 ## TODO: add simChef logo + future
 <img class="future" src="imgs/future.png" alt="R package future hex logo"><p class="future-right">
