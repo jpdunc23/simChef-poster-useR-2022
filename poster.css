@@ -7,13 +7,24 @@ body > footer {
     justify-content: center;
 }
 
+body a {
+    color: white;
+}
+
+body a:focus, body a:hover {
+    color: #FDB515;
+}
+
+main[property="articleBody"] > article a {
+    color: #003262;
+}
+
 #logo-right img {
     background: white;
 }
 
-article {
-    font-size: 19px;
-    line-height: 1.15;
+main[property="articleBody"] > article {
+    /* line-height: 1.15; */
 }
 
 article > header {
@@ -22,5 +33,45 @@ article > header {
 }
 
 pre code {
-    font-size: 1.5em;
+    /* font-size: 1.2em; */
+}
+
+/* Line Hover Indicator */
+.sourceLine:hover {
+    font-weight: bold;
+    opacity: 1 !important;
+}
+
+.sourceLine:active, .sourceLine:hover {
+    text-decoration: none;
+}
+
+.sourceLine:hover:before {
+    content: "\25B6";
+    color: #6d7e8a;
+    position: absolute;
+    transform: translateX(-1.2em);
+    animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes hover {
+    0% {
+        transform: translateX(-1.2em);
+    }
+    100% {
+        transform: translateX(-0.8em);
+    }
+}
+/* Mute highlighted line */
+.remark-code-has-line-highlighted .sourceLine:not(.sourceLine-highlighted) {
+    opacity: 0.4;
+}
+
+/* Override highlight color */
+.sourceLine-highlighted {
+    background-color: inherit;
+}
+
+main[property="articleBody"] > article pre {
+    background-color: white;
 }
