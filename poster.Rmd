@@ -1,0 +1,68 @@
+---
+title: "simChef: an R package"
+subtitle: "useR! Conference 2022 -- Poster Session"
+author:
+  name: "James Duncan<sup>1</sup>, Tiffany Tang<sup>1</sup>, Corrine F. Elliott<sup>1</sup>, Philippe Boileau<sup>1</sup>, Bin Yu<sup>1</sup>"
+  affiliation: "<sup>1</sup>University of California, Berkeley"
+  email: jpduncan@berkeley.edu
+# author:
+#  name: "Tiffany Tang"
+#  affiliation: "University of California, Berkeley"
+date: "June 22, 2022"
+logo:
+  left:
+    src: imgs/cal-seal.svg
+    alt: "University of California, Berkeley"
+  # right:
+  #   src: imgs/simChef.png
+  #   alt: "simChef"
+  #   url: https://yu-group.github.io/simChef
+output:
+  html_document:
+    template: template/template.html
+    css: poster.css
+    md_extensions: -autolink_bare_uris # disable autolinking URLs
+    highlight: rstudio
+---
+
+# Overview
+
+```{r}
+plot(cars, pch = 18)
+```
+
+`simChef` is a powerful framework for designing, documenting, and deploying simulation experiments in R.
+
+Main goals:
+
+- Provide an intuitive grammar of simulation experiments.
+- Reduce the startup time and boilerplate code needed to create simulations.
+- Provide a standard and interactive way to document and visualize simulation results.
+- Support small simulations on a laptop or large ones on a cluster.
+
+# Simulation abstractions
+
+- **Experiment**: a collection of related simulation scenarios.
+- **DGP**: Data-generating process, which define the "ground truth" to generate simulation data flexibly.
+- **Method**: The main objects of study in the simulation, along with baselines.
+- **Evaluator**: Produce meaningful summaries and statistics of the results.
+- **Visualizer**: Outputs plots, tables, R Markdown, latex, etc. to populate interactive experiment documentation.
+
+# Grammar of simulations
+
+```{r, eval=FALSE}
+experiment <- create_experiment() %>%
+  add_dgp(dgp1) %>%
+  add_dgp(dgp2) %>%
+  add_method(method1) %>%
+  add_vary_across(
+    dgp = dgp1,
+    n = c(100, 1000, 10000)
+  ) %>%
+  add_vary_across(
+    method = method1,
+    lambda = c(0.1, 0.5, 1.0)
+  )
+results <- experiment %>%
+  run_experiment()
+```

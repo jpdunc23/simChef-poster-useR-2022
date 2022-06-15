@@ -1,0 +1,26 @@
+/* custom CSS styles in addition to those in poster.css */
+body > header, body > footer {
+    background: #003262;
+}
+
+body > footer {
+    justify-content: center;
+}
+
+#logo-right img {
+    background: white;
+}
+
+article {
+    font-size: 19px;
+    line-height: 1.15;
+}
+
+article > header {
+    color: white;
+    background: #003262;
+}
+
+pre code {
+    font-size: 1.5em;
+}
