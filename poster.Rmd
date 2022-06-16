@@ -43,17 +43,17 @@ xaringanExtra::use_extra_styles(
 - Provide an intuitive grammar of simulation experiments.
 - Reduce the startup time and boilerplate code needed to create simulations.
 - Provide a standard and interactive way to document and visualize simulation results.
-- Run large simulations on a cluster as easily as small one on a laptop.
+- Run large simulations on a cluster as easily as small ones on a laptop.
 
 # Simulation abstractions
 
-**Experiment**: a collection of related simulation scenarios.
+**Experiment**: A collection of related simulation scenarios.
 
 **DGP**: Data-generating processes, which define the "ground truth" and flexibly generate simulated data.
 
-**Method**: The main objects of study, along with baselines.
+**Method**: The main objects of study, along with baselines. (PB: Are baselines the same as competing approaches? Maybe modify to "..., along with (optional) baselines")
 
-**Evaluator**: Produce meaningful statistics and summaries of the results.
+**Evaluator**: Produce meaningful statistics and summaries of the results. (PB: I think that "statistics and summaries" might be redundant? Maybe just summaries?)
 
 **Visualizer**: Output plots, tables, R Markdown, latex, etc. to populate interactive experiment documentation.
 
@@ -105,7 +105,7 @@ Fit results saved | time taken: 0.252786 seconds
 **Other helpful features:**
 
 - Simulation checkpointing every $N$ replicates.
-- Only compute new parts when adding DGPs / Methods / parameters / additional reps.
+- Only compute new parts when adding DGPs / Methods / parameters / additional reps. (PB: Should methods be capitalized?)
 - Recover partial results and inspect errors when one part of the experiment fails.
 
 # Roadmap
