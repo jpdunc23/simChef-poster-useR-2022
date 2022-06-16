@@ -13,10 +13,11 @@ logo:
   left:
     src: imgs/cal-seal.svg
     alt: "University of California, Berkeley"
-  # right:
-  #   src: imgs/simChef.png
-  #   alt: "simChef"
-  #   url: https://yu-group.github.io/simChef
+  right:
+     src: imgs/simChef-hex.png
+     alt: "simChef"
+     url: https://yu-group.github.io/simChef
+posterlink: https://tinyurl.com/simChef-useR-2022
 output:
   html_document:
     template: template/template.html
@@ -33,7 +34,7 @@ xaringanExtra::use_extra_styles(
 )
 ```
 
-# 
+# Overview
 
 `simChef` is a powerful framework for designing, documenting, and deploying simulation experiments in R.
 
@@ -42,15 +43,19 @@ xaringanExtra::use_extra_styles(
 - Provide an intuitive grammar of simulation experiments.
 - Reduce the startup time and boilerplate code needed to create simulations.
 - Provide a standard and interactive way to document and visualize simulation results.
-- Support small simulations on a laptop or large ones on a cluster.
+- Run large simulations on a cluster as easily as small one on a laptop.
 
 # Simulation abstractions
 
-- **Experiment**: a collection of related simulation scenarios.
-- **DGP**: Data-generating process, which define the "ground truth" to generate simulation data flexibly.
-- **Method**: The main objects of study in the simulation, along with baselines.
-- **Evaluator**: Produce meaningful summaries and statistics of the results.
-- **Visualizer**: Outputs plots, tables, R Markdown, latex, etc. to populate interactive experiment documentation.
+**Experiment**: a collection of related simulation scenarios.
+
+**DGP**: Data-generating processes, which define the "ground truth" and flexibly generate simulated data.
+
+**Method**: The main objects of study, along with baselines.
+
+**Evaluator**: Produce meaningful statistics and summaries of the results.
+
+**Visualizer**: Output plots, tables, R Markdown, latex, etc. to populate interactive experiment documentation.
 
 # Grammar of simulations
 
@@ -76,10 +81,9 @@ results <- experiment %>%
 
 ![Interactive R Markdown simulation documentation](imgs/simchef.gif)
 
-# Parallelization
+# Parallelization {.img60}
 
-## TODO: add simChef logo + future
-<img class="future" src="imgs/future.png" alt="R package future hex logo"><p class="future-right">
+<figure><img class="img60" src="imgs/simChef-future.png" alt="simChef plus future R package hex logos" /></figure>
 
 ```{r, eval=FALSE}
 library(future)
@@ -98,19 +102,26 @@ Fit results saved | time taken: 0.252786 seconds
 ==============================
 ```
 
-Other helpful features:
+**Other helpful features:**
 
-- Simulation checkpointing every $N$ replicates
-- Only compute new parts when adding DGPs / Methods / parameters / additional reps
-- Recover partial results and inspect errors when one part of the experiment fails
+- Simulation checkpointing every $N$ replicates.
+- Only compute new parts when adding DGPs / Methods / parameters / additional reps.
+- Recover partial results and inspect errors when one part of the experiment fails.
 
 # Roadmap
 
-- Nested parallelism
-- A sibling package library of flexible and modular DGPs
-- Ongoing usability improvements
-- Submit issues and feature requests [on GitHub](https://github.com/Yu-Group/simChef/issues)!
+- Nested parallelism.
+- A sibling package of flexible and modular DGPs.
+- Ongoing usability improvements.
+- Please submit issues and feature requests [on GitHub](https://github.com/Yu-Group/simChef/issues).
 
-# Test {.no-block .test}
+# {.no-block .img60}
 
-This section doesn't have the poster block styling.
+<figure><a href="https://yu-group.github.io/simChef">![simChef hex logo](imgs/simChef-hex.png)</a></figure>
+
+Thank you!
+
+# Acknowledgements
+
+We acknowledge a number of funding sources and grants that help support our
+research, including the Weill Neurohub, C3.ai, and the NSF.

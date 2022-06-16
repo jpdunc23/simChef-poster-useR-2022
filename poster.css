@@ -16,12 +16,12 @@ body a:focus, body a:hover {
     color: #FDB515;
 }
 
-main[property="articleBody"] > article a {
-    color: #003262;
+article ul > li::before {
+    background: #FDB515;
 }
 
-#logo-right img {
-    background: white;
+main[property="articleBody"] > article a {
+    color: #003262;
 }
 
 main[property="articleBody"] > article:not(.no-block) {
@@ -79,3 +79,11 @@ pre code {
 main[property="articleBody"] > article pre {
     background-color: white;
 }
+
+.img60 img {
+    width: 60%;
+}
+
+/*.img60 p {
+    text-align: center;
+}*/
